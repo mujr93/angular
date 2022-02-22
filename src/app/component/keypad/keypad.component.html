@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="container">
+    <label for="in"><strong>Price</strong></label>
+    <br>
+    <input id="in" type="number" name="in" value="{{ price }}">
+    <br>
+    <app-button color="blue" text="1" (btnClick)="addToInput(1)"></app-button>
+    <app-button color="blue" text="2" (btnClick)="addToInput(2)"></app-button>
+    <app-button color="blue" text="3" (btnClick)="addToInput(3)"></app-button>
+    <br>
+    <app-button color="blue" text="4" (btnClick)="addToInput(4)"></app-button>
+    <app-button color="blue" text="5" (btnClick)="addToInput(5)"></app-button>
+    <app-button color="blue" text="6" (btnClick)="addToInput(6)"></app-button>
+    <br>
+    <app-button color="blue" text="7" (btnClick)="addToInput(7)"></app-button>
+    <app-button color="blue" text="8" (btnClick)="addToInput(8)"></app-button>
+    <app-button color="blue" text="9" (btnClick)="addToInput(9)"></app-button>
+    <br>
+    <app-button color="blue" text="*"></app-button>
+    <app-button color="blue" text="0" (btnClick)="addToInput(0)"></app-button>
+    <app-button color="blue" text="<" (btnClick)="removeFromInput()"></app-button>
+    <br>
+    <br>
+    <app-button color="green" text="Add" (btnClick)="addToList()"></app-button>
+    <app-button color="green" text="Clear" (btnClick)="clearInput()"></app-button>
+  </div>
+  <div class="container" id="out">
+    <li *ngFor="let l of list">
+      {{ l }}
+    </li>
+    <app-button color="green" text="Clear" (btnClick)="clearList()"></app-button>
+    <label for="in"><strong>Total: ${{ total }}</strong></label>
+  </div>
+</div>
